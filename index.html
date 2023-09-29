@@ -13,60 +13,87 @@
 		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 		crossorigin="">
 	</script>
+	<script src="https://unpkg.com/geojson-vt@3.2.0/geojson-vt.js"></script>
+	<script src="./module/leaflet-geojson-vt.js"></script>
+	<script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+	<script src="./module/kml-geojson.js"></script>
+	<script src="https://unpkg.com/georaster"></script>
+	<script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
 
 </head>
 
 <body>
-	
-	<div id="project">
-	
-	</div>
+
+	<dialog id="loading"></dialog>
+	<dialog id="error"></dialog>
 
 	<div id="canvas">
 
-		<div id="info" class="panel">
+		<div class="float vertical">
 			
-			<div id="photo">
-				<img src="library/20211105_133525.jpg"/>
+			<div id="info" class="panel">
+			
+				<div id="photo">
+					<img src="library/20211105_133525.jpg"/>
+				</div>
+	
+				<div id="intro" class="center2">
+					
+					<div>
+						Hi! I am Ramadhan.
+					</div>
+	
+					<div>
+						a GIScience Enthusiast
+					</div>
+					
+					<div>
+						<div>
+							Working as GIS Engineer at &nbsp;
+						</div>
+						<a href="https://fairatmos.com" target="_blank" style="font-weight: bold;">Fairatmos</a>
+					</div>
+	
+					<div>
+						<div>
+							Soon to be graduate from &nbsp;
+						</div>
+						<a href="https://ugm.ac.id" target="_blank" style="font-weight: bold;">UGM</a>
+					</div>
+	
+					<div>
+						I like to explore geospatial programming, flood modelling, and coastal biodiversity
+					</div>
+					
+				</div>
+	
 			</div>
 
-			<div id="intro" class="center2">
-				
-				<div>
-					Hi! I am Ramadhan.
-				</div>
+			<div id="contact" class="panel">
+				<a href="https://github.com/ramiqcom" target="_blank">
+					<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="webimage"/>
+				</a>
 
-				<div>
-					a GIScience Enthusiast
-				</div>
-				
-				<div>
-					<div>
-						Working as GIS Engineer at &nbsp;
-					</div>
-					<a href="https://fairatmos.com" target="_blank" style="font-weight: bold;">Fairatmos</a>
-				</div>
+				<a href="https://youtube.com/ramiqcom" target="_blank">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1200px-YouTube_social_white_square_%282017%29.svg.png" class="webimage"/>
+				</a>
 
-				<div>
-					<div>
-						Soon to be graduate from &nbsp;
-					</div>
-					<a href="https://ugm.ac.id" target="_blank" style="font-weight: bold;">UGM</a>
-				</div>
+				<a href="https://linkedin.com/in/ramiqcom" target="_blank">
+					<img src="https://pbs.twimg.com/profile_images/1661161645857710081/6WtDIesg_400x400.png" class="webimage"/>
+				</a>
 
-				<div>
-					I like to explore geospatial programming and coastal biodiversity
-				</div>
-				
+				<a href="https://earthengine.googlesource.com/users/ramiqcom" target="_blank">
+					<img src="https://earthengine.google.com/static/images/earth-engine-logo.png" class="webimage"/>
+				</a>
+
+				<a href="mailto:ramiqcom@gmail.com">
+					<img src="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI" class="webimage"/>
+				</a>
 			</div>
 
 		</div>
 
 		<div id="map"></div>
-
-	</div>
-
-	<div id="contact">
 
 	</div>
 

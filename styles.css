@@ -79,34 +79,41 @@ img {
 	gap: 20px;
 }
 
-.panel {
-	height: fit-content;
-	width: 30%;
+.float {
+	height: 50vh;
 	z-index: 999999;
+	width: 35%;
 	font-size: medium;
 	position: absolute;
-	background-color: whitesmoke;
 	display: flex;
-	padding: 1%;
-	margin: 3%;
-	border-radius: 5px;
+	flex-direction: column;
+	margin-top: 3%;
+	margin-left: 1%;
 	gap: 15px;
+	padding: 1%;
 }
 
-#project {
-	flex: 1
+.panel {
+	background-color: whitesmoke;
+	padding: 2%;
+	border-radius: 1vh;
 }
 
-#canvas {
-	flex: 10
+.webimage {
+	height: 7vh;
+	border: 0.5px solid grey;
+}
+
+#info {
+	gap: 10px;
 }
 
 #contact {
-	flex: 1
+	justify-content: space-between;
 }
 
-#photoname {
-	gap: 3%;
+#canvas {
+	flex: 1
 }
 
 #map {
@@ -121,7 +128,7 @@ img {
 #intro {
 	flex: 2;
 	flex-direction: column;
-	gap: 5%;
+	gap: 2%;
 	border: 0.5px solid black;
 	padding: 1%;
 }
