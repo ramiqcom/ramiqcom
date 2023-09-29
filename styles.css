@@ -1,0 +1,127 @@
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+* {
+  font-family: 'Cascadia Code', sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: whitesmoke;
+}
+
+div {
+	display: flex;
+}
+
+select {
+	width: 100%;
+}
+
+button {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #215478;
+  text-align: center;
+  color: white;
+  font-size: medium;
+  border: 0;
+}
+
+button:hover {
+  background-color: #267565;
+}
+
+button:disabled {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #215478;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #267565;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.center1 {
+  align-content: center;
+}
+
+.center2 {
+  justify-content: center;
+}
+
+.center3 {
+  align-items: center;
+}
+
+.vertical {
+	flex-direction: column;
+}
+
+.smallgap {
+	gap: 5px;
+}
+
+.mediumgap {
+	gap: 10px;
+}
+
+.biggap {
+	gap: 20px;
+}
+
+.panel {
+	height: fit-content;
+	width: 30%;
+	z-index: 999999;
+	font-size: medium;
+	position: absolute;
+	background-color: whitesmoke;
+	display: flex;
+	padding: 1%;
+	margin: 3%;
+	border-radius: 5px;
+	gap: 15px;
+}
+
+#project {
+	flex: 1
+}
+
+#canvas {
+	flex: 10
+}
+
+#contact {
+	flex: 1
+}
+
+#photoname {
+	gap: 3%;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+#photo {
+	flex: 1;
+}
+
+#intro {
+	flex: 2;
+	flex-direction: column;
+	gap: 5%;
+	border: 0.5px solid black;
+	padding: 1%;
+}
