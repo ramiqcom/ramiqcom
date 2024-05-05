@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
+import Loading from '../../components/loading';
 import Main from '../../components/main';
 import contact from '../../data/contact.json';
 import pages from '../../data/pages.json';
@@ -7,7 +9,9 @@ export default function App() {
   return (
     <div id='app' className='flexible vertical'>
       <Header />
-      <Main />
+      <Suspense fallback={<Loading />}>
+        <Main />
+      </Suspense>
       <Footer />
     </div>
   );
