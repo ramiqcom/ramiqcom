@@ -1,7 +1,11 @@
+import { useSearchParams } from "next/navigation"
+
 export default function Panel() {
+	const page = useSearchParams().get('page');
+
 	return (
-		<div>
-			
+		<div id='panel'>
+
 		</div>
 	)
 }

@@ -2,7 +2,6 @@
   { "label": "Home", "value": "home" },
   { "label": "About Me", "value": "about" },
   { "label": "Project", "value": "project" },
-  { "label": "Work Experience", "value": "work" },
-  { "label": "Research", "value": "research" },
-  { "label": "Education", "value": "education" }
+  { "label": "Career", "value": "career" },
+  { "label": "Research", "value": "research" }
 ]
