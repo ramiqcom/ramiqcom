@@ -1,11 +1,11 @@
 import { point } from '@turf/turf';
 import { LngLatLike, Map } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { Context } from '../module.ts/store';
 
 export default function MapCanvas() {
-  const page = useSearchParams().get('page');
+  const { page } = useContext(Context);
   const [map, setMap] = useState<Map>();
   const mapId = 'map';
   const style = `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${process.env.NEXT_PUBLIC_STADIA_KEY}`;
@@ -14,6 +14,7 @@ export default function MapCanvas() {
     const map = new Map({
       container: mapId,
       style: style,
+      zoom: 6,
     });
     setMap(map);
   }, []);

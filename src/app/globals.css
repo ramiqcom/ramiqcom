@@ -244,6 +244,8 @@ button:disabled {
   z-index: 9999999;
   margin-top: 1vh;
   margin-left: 1vh;
+  margin-bottom: 1vh;
+  max-width: 30vh;
 }
 
 #modal {

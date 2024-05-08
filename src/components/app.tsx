@@ -1,19 +1,32 @@
+'use client';
+
+import MapCanvas from './map';
+import Panel from './panel';
+
 import Link from 'next/link';
-import { Suspense } from 'react';
-import Loading from '../../components/loading';
-import Main from '../../components/main';
-import contact from '../../data/contact.json';
-import pages from '../../data/pages.json';
+import { useState } from 'react';
+import contact from '../data/contact.json';
+import pages from '../data/pages.json';
+import { Context } from '../module.ts/store';
+import { Page } from '../module.ts/type';
 
 export default function App() {
+  const [page, setPage] = useState<Page>('home');
+
+  const states = {
+    page,
+    setPage,
+  };
+
   return (
-    <div id='app' className='flexible vertical'>
+    <Context.Provider value={states}>
       <Header />
-      <Suspense fallback={<Loading />}>
-        <Main />
-      </Suspense>
+      <div id='main' className='flexible'>
+        <Panel />
+        <MapCanvas />
+      </div>
       <Footer />
-    </div>
+    </Context.Provider>
   );
 }
 

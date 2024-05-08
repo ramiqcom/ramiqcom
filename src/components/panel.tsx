@@ -1,11 +1,8 @@
-import { useSearchParams } from "next/navigation"
+import { useContext } from 'react';
+import { Context } from '../module.ts/store';
 
 export default function Panel() {
-	const page = useSearchParams().get('page');
+  const { page } = useContext(Context);
 
-	return (
-		<div id='panel'>
-
-		</div>
-	)
+  return <div id='panel'></div>;
 }
