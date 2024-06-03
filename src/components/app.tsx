@@ -3,12 +3,12 @@
 import MapCanvas from './map';
 import Panel from './panel';
 
+import contact from '@/data/contact.json';
+import pages from '@/data/pages.json';
+import { Context } from '@/module.ts/store';
+import { Page } from '@/module.ts/type';
 import Link from 'next/link';
 import { useState } from 'react';
-import contact from '../data/contact.json';
-import pages from '../data/pages.json';
-import { Context } from '../module.ts/store';
-import { Page } from '../module.ts/type';
 
 export default function App() {
   const [page, setPage] = useState<Page>('home');
@@ -57,7 +57,10 @@ function Footer() {
     </a>
   ));
   return (
-    <div id='footer' className='flexible justify-content-center frame align-items-center gap'>
+    <div
+      id='footer'
+      className='flexible align-content-center align-items-center justify-content-center gap'
+    >
       {contactDiv}
     </div>
   );

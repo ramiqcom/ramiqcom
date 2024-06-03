@@ -15,6 +15,7 @@ body {
 a {
   color: #e8e6e3;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
@@ -177,12 +178,16 @@ button:disabled {
   align-items: center;
 }
 
-.align-items-stretch {
-  align-items: stretch;
+.align-content-center {
+  align-content: center;
 }
 
 .justify-content-center {
   justify-content: center;
+}
+
+.align-items-stretch {
+  align-items: stretch;
 }
 
 .text-center {
@@ -262,4 +267,16 @@ button:disabled {
   overflow-y: auto;
   max-height: 60vh;
   font-size: smaller;
+}
+
+#profile {
+  max-width: 30vh;
+}
+
+#header {
+  height: 5%;
+}
+
+#footer {
+  height: 5%;
 }

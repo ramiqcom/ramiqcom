@@ -1,8 +1,8 @@
+import { Context } from '@/module.ts/store';
 import { point } from '@turf/turf';
 import { LngLatLike, Map } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { useContext, useEffect, useState } from 'react';
-import { Context } from '../module.ts/store';
 
 export default function MapCanvas() {
   const { page } = useContext(Context);
