@@ -1,50 +1,43 @@
+import locations from '@/data/locations.json';
 import { Context } from '@/module.ts/store';
-import { point } from '@turf/turf';
 import { LngLatLike, Map } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { useContext, useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useContext, useEffect } from 'react';
 
 export default function MapCanvas() {
-  const { page } = useContext(Context);
-  const [map, setMap] = useState<Map>();
+  const { setMap } = useContext(Context);
   const mapId = 'map';
-  const style = `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${process.env.NEXT_PUBLIC_STADIA_KEY}`;
+  const style = `/basemap`;
+  const basemapId = 'basemap';
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     const map = new Map({
       container: mapId,
-      style: style,
-      zoom: 6,
+      style: {
+        version: 8,
+        sources: {
+          [basemapId]: {
+            type: 'raster',
+            url: style,
+          },
+        },
+        layers: [{ type: 'raster', source: basemapId, id: basemapId }],
+      },
+      zoom: 10,
     });
+
+    map.on('load', () => {
+      const page = searchParams.get('page');
+      const coords = locations.bennekom.coords;
+      map.setCenter(coords as LngLatLike);
+    });
+
     setMap(map);
   }, []);
 
-  useEffect(() => {
-    if (map && page) {
-      map.on('load', () => {
-        switch (page) {
-          case 'home': {
-            const coord = [5.670208, 52.005848];
-            const pointData = point(coord);
-            map.addSource('point', {
-              data: pointData,
-              type: 'geojson',
-            });
-            map.addLayer({
-              source: 'point',
-              id: 'point',
-              type: 'circle',
-              paint: {
-                'circle-color': 'red',
-              },
-            });
-            map.setCenter(coord as LngLatLike);
-            break;
-          }
-        }
-      });
-    }
-  }, [map, page]);
+  useEffect(() => {});
 
   return <div id={mapId}></div>;
 }

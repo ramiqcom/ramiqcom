@@ -6,16 +6,25 @@ import Panel from './panel';
 import contact from '@/data/contact.json';
 import pages from '@/data/pages.json';
 import { Context } from '@/module.ts/store';
-import { Page } from '@/module.ts/type';
+import { Map } from 'maplibre-gl';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function App() {
-  const [page, setPage] = useState<Page>('home');
+  const router = useRouter();
+  const page = pages[0];
+
+  useEffect(() => {
+    router.push(`/?page=${page.value}`);
+  }, []);
+
+  const [map, setMap] = useState<Map>();
 
   const states = {
     page,
-    setPage,
+    map,
+    setMap,
   };
 
   return (
@@ -36,7 +45,9 @@ function Header() {
       {pages.map((page, index) => (
         <Link
           key={index}
-          href={{ query: { page: page.value } }}
+          href={{
+            query: { page: page.value, subpage: page.value == 'about' ? 'childhood' : undefined },
+          }}
           style={{
             width: '100%',
             textAlign: 'center',

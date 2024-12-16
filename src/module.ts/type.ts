@@ -1,8 +1,10 @@
+import { Map } from 'maplibre-gl';
 import { Dispatch, SetStateAction } from 'react';
 
-export type Page = 'home' | 'about' | 'project' | 'career' | 'research';
-export type Set<T> = Dispatch<SetStateAction<T>>;
+export type Page = { label: string; value: string };
+export type SetState<T> = Dispatch<SetStateAction<T>>;
 export type GlobalContext = {
   page: Page;
-  setPage: Set<Page>;
+  map: Map;
+  setMap: SetState<Map>;
 };
