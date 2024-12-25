@@ -18,7 +18,7 @@ If you like to watch remote sensing analysis tutorial, watch my [Youtube Channel
 
 If you are interested with more of my works, visit:
 
-### Remote Sensing Analysis Script Collections :
+### Remote Sensing Analysis Script Collections
 
 - [Remote Sensing with Python](https://github.com/ramiqcom/remote-sensing-python)
 - [Remote Sensing with Google Earth Engine](https://earthengine.googlesource.com/users/ramiqcom/youtube)
