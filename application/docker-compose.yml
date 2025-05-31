@@ -1,0 +1,11 @@
+services:
+  website:
+    platform: linux/amd64
+    container_name: website-ramiqcom
+    build: website-fresh
+    ports:
+      - 3000:3000
+    develop:
+      watch:
+        - path: website-fresh
+          action: rebuild

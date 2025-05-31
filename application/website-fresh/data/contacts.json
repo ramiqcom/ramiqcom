@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Email",
+    "value": "email",
+    "href": "mailto:ramiqcom@gmail.com",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/800px-Gmail_icon_%282020%29.svg.png"
+  },
+  {
+    "label": "Linkedin",
+    "value": "linkedin",
+    "href": "https://linkedin.com/in/ramiqcom",
+    "image": "https://cdn.uconnectlabs.com/wp-content/uploads/sites/46/2022/08/Linkedin-Logo-e1660320077673.png"
+  },
+  {
+    "label": "GitHub",
+    "value": "github",
+    "href": "https://github.com/ramiqcom",
+    "image": "https://miro.medium.com/v2/resize:fit:1125/1*dDNpLKu_oTLzStsDTnkJ-g.png"
+  },
+  {
+    "label": "YouTube",
+    "value": "youtube",
+    "href": "https://youtube.com/@ramiqcom",
+    "image": "https://1000logos.net/wp-content/uploads/2017/05/Youtube-Logo.png"
+  }
+]

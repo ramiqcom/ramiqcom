@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://unpkg.com/maplibre-gl@^5.5.0/dist/maplibre-gl.css');
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-size: medium;
+  background-color: black;
+  color: whitesmoke;
+}
+
+a {
+  color: lightskyblue;
+  font-weight: bold;
+}
+
+a:visited {
+  color: lavender;
+}
+
+a:hover {
+  color: deepskyblue;
+  cursor: pointer;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.vertical {
+  flex-direction: column;
+}
+
+.flex.ac-center {
+  align-content: center;
+}
+
+.flex.ai-center {
+  align-items: center;
+}
+
+.flex.jc-center {
+  justify-content: center;
+}
+
+.flex.small-gap {
+  gap: 1vh;
+}
+
+.flex.gap {
+  gap: 2vh;
+}
+
+.flex.big-gap {
+  gap: 3vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.paragrah {
+  text-align: left;
+}
+
+.page {
+  padding: 4vh;
+  width: 100%;
+}
+
+.inline {
+  display: inline;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#map canvas {
+  cursor: crosshair;
+}
