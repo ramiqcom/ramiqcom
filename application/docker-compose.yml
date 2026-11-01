@@ -2,10 +2,12 @@ services:
   website:
     platform: linux/amd64
     container_name: website-ramiqcom
-    build: website-fresh
+    build: website-next
     ports:
       - 3000:3000
+    environment:
+      NEXT_PUBLIC_STADIA_KEY: ${NEXT_PUBLIC_STADIA_KEY:-}
     develop:
       watch:
-        - path: website-fresh
+        - path: website-next
           action: rebuild

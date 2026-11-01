@@ -1,54 +1,39 @@
-## Hi! It's a me, **Ramadhan**!
+# ramiqcom
 
-[![GitHub Badge](https://img.shields.io/github/followers/ramiqcom?style=social)](https://github.com/ramiqcom?tab=followers)
-[![Twitter Badge](https://img.shields.io/twitter/follow/ramiqcom?style=social)](https://twitter.com/ramiqcom)
-[![Google Scholar Badge](https://img.shields.io/badge/Google-Scholar-lightgrey)](https://scholar.google.com/citations?user=TAZp-ggAAAAJ&hl=en)
-[![YouTube Badge](https://img.shields.io/badge/My-YouTube-red)](https://www.youtube.com/@ramiqcom)
-[![LinkedIn Badge](https://img.shields.io/badge/My-LinkedIn-blue)](https://www.linkedin.com/in/ramiqcom)
-[![CV Badge](https://img.shields.io/badge/My-CV-critical)](https://1drv.ms/b/s!AoVAzpnlCUwHhvBU2HvyEXAi95KCIA?e=LxwoCZ)
-[![Donate Badge](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-yellowgreen.svg)](https://www.buymeacoffee.com/ramiqcom)
-![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=ramiqcom.ramiqcom)
+The Next.js and React implementation of Ramadhan's personal portfolio. It uses MapLibre GL JS for the interactive map and serves its Stadia Maps style through a Next.js route handler.
 
-I am a remote sensing data scientist who currently work at [Space4Good](https://space4good.com) in The Hague, Netherlands.
-Originally from Indonesia where I graduated with a bachelor's degree in Cartography :world_map: and Remote Sensing :artificial_satellite: from [Universitas Gadjah Mada](https://ugm.ac.id).
+## Requirements
 
-I like to explore data science :bar_chart:, machine learning, AI, and web application development :computer: for geospatial :compass: and earth observation :earth_asia: with Google Earth Engine, Rasterio, QGIS, NextJS, MapLibre, and more! On topic, I am an expert in carbon biomass, forest :deciduous_tree:, coastal habitat :anchor:, seagrass :leafy_green:, and flood :droplet:.
+- Node.js 18
+- A Stadia Maps API key
 
-If you like to watch remote sensing analysis tutorial, watch my [Youtube Channel](https://youtube.com/@ramiqcom) or read my [LinkedIn](https://linkedin.com/in/ramiqcom).
+## Development
 
-If you are interested with more of my works, visit:
+Install dependencies:
 
-### Remote Sensing Analysis Script Collections
+```sh
+npm ci
+```
 
-- [Remote Sensing with Python](https://github.com/ramiqcom/remote-sensing-python)
-- [Remote Sensing with Google Earth Engine](https://earthengine.googlesource.com/users/ramiqcom/youtube)
+Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_STADIA_KEY` to your Stadia Maps API key. Then run:
 
----
+```sh
+npm run dev
+```
 
-### Geospatial Web Application
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Indonesia Land Cover Above-Ground Biomass](https://indonesia-biomass.vercel.app/) | [Repository](https://github.com/ramiqcom/indonesia-biomass)
-- [World's Land Cover](https://landcover-analysis.vercel.app/) | [Repository](https://github.com/ramiqcom/landcover-analysis)
-- [World's Population](https://world-population-coral.vercel.app/) | [Repository](https://github.com/ramiqcom/world-population)
+## Production
 
----
+```sh
+npm run build
+npm run start
+```
 
-### Guidebook
+To run with Docker Compose from this directory, create `.env` from `.env.example`, then run:
 
-- [Google Earth Engine for Hidrosphere](https://github.com/ramiqcom/ebook-hidro-gee/blob/main/ebook_hidrosfer.pdf)
-- [Google Earth Engine for Urban](https://github.com/ramiqcom/ebook-urban-gee/blob/main/ebook_urban.pdf)
-- [Google Earth Engine for Vegetation](https://github.com/ramiqcom/ebook-vegetation-gee/blob/main/ebook_vegetation.pdf)
+```sh
+docker compose up --build
+```
 
----
-
-### Read My Paper!
-
-- [The development land utilization and cover of the Jambi district are examined and forecasted using Google Earth Engine and CNN1D](https://www.sciencedirect.com/science/article/abs/pii/S2352938524000399)
-- [Relationship between circularity ratio and flood hazard of Java Island’s watershed
-  ](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12977/129771K/Relationship-between-circularity-ratio-and-flood-hazard-of-Java-Islands/10.1117/12.3009342.short)
-- [Sentinel-1-derived Multi-Temporal Flood Hazard of North and South Java: The Case of Bodri and Serayu Watershed](https://ieeexplore.ieee.org/abstract/document/10388940)
-
----
-
-![github stats](https://github-readme-stats-sigma-five.vercel.app/api?username=ramiqcom&show_icons=true)
-![Top Langs](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=ramiqcom&langs_count=3&hide=javascript,go,html,css,tex)
+The root `application/docker-compose.yml` also builds this app. Set `NEXT_PUBLIC_STADIA_KEY` in your shell or in `application/.env` before starting it.

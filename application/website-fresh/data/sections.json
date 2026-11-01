@@ -1,8 +1,0 @@
-[
-  {
-    "label": "Tutorials",
-    "value": "tutorial"
-  },
-  { "label": "Application", "value": "application" },
-  { "label": "About me", "value": "about_me" }
-]
