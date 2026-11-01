@@ -197,6 +197,32 @@ export const videos: Video[] = [
     id: 'xwaAoiWoHDw',
     year: 2024,
   },
+  {
+    title: 'World Population Explorer and Analysis Application with Next, Maplibre, and Earth Engine',
+    id: 'GDNweqDgSL0',
+    year: 2024,
+  },
+  {
+    title: 'Adding Earth Engine Layer to Your Web Map with Maplibre, Next, and Earth Engine for NodeJS',
+    id: '-353-xG0wLY',
+    year: 2024,
+  },
+  {
+    title: 'Land Cover Change Analysis Application using Maplibre, Next and Earth Engine',
+    id: 'JGHEiUuTT1Q',
+    year: 2024,
+  },
+  {
+    title: 'Generate Monthly Cloudless Composite Imagery in Google Earth Engine',
+    id: 'KriQyiwK9Gk',
+    year: 2023,
+  },
+  { title: 'Simple Web App to Visualize Shapefile in Browser', id: '-x1aWzcxWzA', year: 2023 },
+  {
+    title: 'Create Urban Density Index using Spectral Indices and Convolution in Google Earth Engine',
+    id: 'N5lb6rQkLDc',
+    year: 2023,
+  },
 ];
 
 export const links = {
