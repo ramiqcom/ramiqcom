@@ -18,7 +18,7 @@ export default function About() {
           {'<'}
         </button>
         <button
-          onClick={() => router.push(`${path}?page=about?subpage=teenage`)}
+          onClick={() => router.push(`${path}?page=about&subpage=teenage`)}
           style={{ width: '5vh' }}
         >
           {'>'}

@@ -6,7 +6,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      NEXT_PUBLIC_STADIA_KEY: ${NEXT_PUBLIC_STADIA_KEY:-}
+      STADIA_KEY: ${STADIA_KEY:-}
     develop:
       watch:
         - path: website-next

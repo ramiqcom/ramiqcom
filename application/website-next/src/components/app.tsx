@@ -8,16 +8,19 @@ import pages from '@/data/pages.json';
 import { Context } from '@/module.ts/store';
 import { Map } from 'maplibre-gl';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function App() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const page = pages[0];
 
   useEffect(() => {
-    router.push(`/?page=${page.value}`);
-  }, []);
+    if (!searchParams.get('page')) {
+      router.replace(`/?page=${page.value}`);
+    }
+  }, [page.value, router, searchParams]);
 
   const [map, setMap] = useState<Map>();
 

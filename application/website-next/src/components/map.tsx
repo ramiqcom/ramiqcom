@@ -2,7 +2,6 @@ import locations from '@/data/locations.json';
 import { Context } from '@/module.ts/store';
 import { LngLatLike, Map } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { useSearchParams } from 'next/navigation';
 import { useContext, useEffect } from 'react';
 
 export default function MapCanvas() {
@@ -10,7 +9,6 @@ export default function MapCanvas() {
   const mapId = 'map';
   const style = `/basemap`;
   const basemapId = 'basemap';
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     const map = new Map({
@@ -29,15 +27,13 @@ export default function MapCanvas() {
     });
 
     map.on('load', () => {
-      const page = searchParams.get('page');
-      const coords = locations.bennekom.coords;
-      map.setCenter(coords as LngLatLike);
+      map.setCenter(locations.bennekom.coords as LngLatLike);
     });
 
     setMap(map);
-  }, []);
 
-  useEffect(() => {});
+    return () => map.remove();
+  }, []);
 
   return <div id={mapId}></div>;
 }

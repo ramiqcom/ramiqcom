@@ -15,7 +15,7 @@ Install dependencies:
 npm ci
 ```
 
-Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_STADIA_KEY` to your Stadia Maps API key. Then run:
+Copy `.env.example` to `.env.local` and set `STADIA_KEY` to your Stadia Maps API key. Then run:
 
 ```sh
 npm run dev
@@ -36,4 +36,4 @@ To run with Docker Compose from this directory, create `.env` from `.env.example
 docker compose up --build
 ```
 
-The root `application/docker-compose.yml` also builds this app. Set `NEXT_PUBLIC_STADIA_KEY` in your shell or in `application/.env` before starting it.
+The root `application/docker-compose.yml` also builds this app. Set `STADIA_KEY` in your shell or in `application/.env` before starting it.
